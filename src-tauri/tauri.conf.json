@@ -34,7 +34,12 @@
       "csp": null
     },
     "updater": {
-      "active": false
+      "active": true,
+      "dialog": true,
+      "endpoints": [
+        "https://lencx.github.io/tauri-app-demo/install.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEMwRTg2MjEyNUIyNEZGODIKUldTQy95UmJFbUxvd0wzUUJ3RXBZYUJQV3lWaFVObk93YldJWmRaVGRuZjZ6Q3lqUVRKdHRSbGEK"
     },
     "windows": [
       {

@@ -13,7 +13,7 @@ jobs:
       RELEASE_UPLOAD_ID: ${{ steps.create_release.outputs.id }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Query version number
         id: get_version
         shell: bash
@@ -23,12 +23,12 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "${{ steps.get_version.outputs.VERSION }}"
-          release_name: "OhMyBox ${{ steps.get_version.outputs.VERSION }}"
+          name: "tauri-app ${{ steps.get_version.outputs.VERSION }}"
           body: "See the assets to download this version and install."
 
   build-tauri:
@@ -40,7 +40,7 @@ jobs:
 
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup node
         uses: actions/setup-node@v1
@@ -99,7 +99,7 @@ jobs:
     needs: [create-release, build-tauri]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: yarn
       - run: yarn updater
         env:
