@@ -1,11 +1,11 @@
 {
     "version": "v0.0.12",
-    "notes": "测试版本",
-    "pub_date": "2022-08-02T15:56:57Z",
+    "notes": "v0.0.12测试版本",
+    "pub_date": "2023-05-04 18:10:47",
     "platforms": {
         "windows-x86_64": {
             "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEMwRTg2MjEyNUIyNEZGODIKUldTQy95UmJFbUxvd0wzUUJ3RXBZYUJQV3lWaFVObk93YldJWmRaVGRuZjZ6Q3lqUVRKdHRSbGEK",
-            "url": "https://gitee.com/zhidal/tauri-vite-demo/attach_files/1145742/download/xxx.msi.zip"
+            "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.12/xaggeo-app_0.0.12_x64_en-US.msi"
         }
     }
 }

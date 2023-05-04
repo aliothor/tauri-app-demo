@@ -3,8 +3,8 @@ import { execSync } from "child_process";
 import fs from "fs";
 import dayjs from "dayjs";
 
-import packageJson from "../package.json" assert { type: "json" };
-import installJson from "../install.json" assert { type: "json" };
+// import packageJson from "../package.json" assert { type: "json" };
+// import installJson from "../install.json" assert { type: "json" };
 
 import updatelog from "./updatelog.mjs";
 
@@ -15,7 +15,8 @@ const require = createRequire(import.meta.url);
 async function release() {
   const flag = process.argv[2] ?? "patch";
 
-  // const packageJson = require("../package.json");
+  const packageJson = require("../package.json");
+  const installJson = require("../install.json");
 
   let [a, b, c] = packageJson.version.split(".").map(Number);
 
@@ -55,7 +56,7 @@ async function release() {
   execSync(`git tag -a v${nextVersion} -m "v${nextVersion}"`);
   execSync(`git push`);
   execSync(`git push origin v${nextVersion}`);
-  console.log(`Publish Successfully...`);
+  console.log(`${nextTag} 发布成功！`);
 }
 
 release().catch(console.error);
