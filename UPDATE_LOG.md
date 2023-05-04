@@ -1,8 +1,12 @@
 # Updater Log
 
+## v0.0.15
+
+跨端[windows-latest, ubuntu-latest, macos-latest]自动更新测试
+
 ## v0.0.14
 
-自动更新测试
+windows平台自动更新测试
 
 ## v0.0.13
 

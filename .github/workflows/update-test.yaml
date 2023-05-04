@@ -8,7 +8,7 @@ on:
 
 jobs:
   create-release:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     outputs:
       RELEASE_UPLOAD_ID: ${{ steps.create_release.outputs.id }}
 
@@ -19,24 +19,27 @@ jobs:
         shell: bash
         run: |
           echo "using version tag ${GITHUB_REF:10}"
-          echo ::set-output name=version::"${GITHUB_REF:10}"
-          
+          # echo ::set-output name=version::"${GITHUB_REF:10}"
+          echo "{version}={GITHUB_REF:10}" >> $GITHUB_OUTPUT
+
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "${{ steps.get_version.outputs.VERSION }}"
-          release_name: "tauri-app ${{ steps.get_version.outputs.VERSION }}"
-          body: "See the assets to download this version and install."
+          name: "xaggeo-app ${{ steps.get_version.outputs.VERSION }}"
+          body: "更新内容请查看UPDATE_LOG.md文件"
+          body_path: ${{ github.workspace }}-UPDATE_LOG.md
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   build-tauri:
     needs: create-release
     strategy:
       fail-fast: false
       matrix:
-        platform: [windows-latest]
+        platform: [windows-latest, ubuntu-latest, macos-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -83,7 +86,7 @@ jobs:
 
   # 生成静态资源并将其推送到 github pages
   updater:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: [create-release, build-tauri]
 
     steps:
