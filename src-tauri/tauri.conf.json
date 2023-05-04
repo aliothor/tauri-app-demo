@@ -43,7 +43,7 @@
       "active": true,
       "dialog": false,
       "endpoints": [
-        "http://192.168.11.85:8080/install.json"
+        "https://192.168.11.85:8080/install.json"
       ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEMwRTg2MjEyNUIyNEZGODIKUldTQy95UmJFbUxvd0wzUUJ3RXBZYUJQV3lWaFVObk93YldJWmRaVGRuZjZ6Q3lqUVRKdHRSbGEK"
     },
