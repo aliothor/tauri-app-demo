@@ -1,11 +1,11 @@
 {
-    "version": "v0.0.12",
-    "notes": "v0.0.12测试版本",
-    "pub_date": "2023-05-04T15:56:57Z",
-    "platforms": {
-        "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM4MkVEREM0RDVDQjA2ODQKUldTRUJzdlZ4TjB1eU4yYUZUb2dCWGJEMVFpVGJuRHJ2YmRlUS9rOFBmY1VVeThJRXNtOFd0UmoK",
-            "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.12/xaggeo-app_0.0.12_x64_en-US.msi"
-        }
+  "version": "v0.0.13",
+  "notes": "v0.0.12测试版本",
+  "pub_date": "2023-05-04 19:34:12",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM4MkVEREM0RDVDQjA2ODQKUldTRUJzdlZ4TjB1eU4yYUZUb2dCWGJEMVFpVGJuRHJ2YmRlUS9rOFBmY1VVeThJRXNtOFd0UmoK",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.12/xaggeo-app_0.0.12_x64_en-US.msi"
     }
+  }
 }
