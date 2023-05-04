@@ -29,7 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "${{ steps.get_version.outputs.version }}"
-          name: "xaggeo-app ${{ steps.get_version.outputs.version }} ${{GITHUB_REF:10}}"
+          name: "xaggeo-app ${{ steps.get_version.outputs.version }}"
           body: "更新内容请查看 UPDATE_LOG.md 文件"
           # body_path: ${{ github.workspace }}-UPDATE_LOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
