@@ -1,52 +1,62 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Greet from "./components/Greet.vue";
+import { ref } from "vue";
+import { MessagePlugin } from "tdesign-vue-next";
+
+import { checkUpdate, installUpdate } from "@tauri-apps/api/updater";
+import { relaunch } from '@tauri-apps/api/process';
+
+import pkg from "../package.json";
+
+const isNeedUpdate = ref(false);
+const updateInfo = ref();
+const loading = ref(false);
+
+async function appCheckUpdate() {
+  loading.value = true;
+
+  try {
+    const { shouldUpdate, manifest } = await checkUpdate()
+    console.log(shouldUpdate, manifest);
+    isNeedUpdate.value = shouldUpdate;
+    updateInfo.value = manifest;
+  } catch (error) {
+    console.error(error);
+    MessagePlugin.error("版本更新失败");
+  } finally {
+    loading.value = false;
+  }
+}
+
+async function appInstallNewVersion() {
+  try {
+    if (isNeedUpdate.value) {
+      await installUpdate();
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
 </script>
 
 <template>
   <div class="container">
-    <h1>Welcome to Tauri(当前版本 0.0.12)</h1>
-
-    <div class="row">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo vite" alt="Vite logo" />
-      </a>
-      <a href="https://tauri.app" target="_blank">
-        <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
-    </div>
-
-    <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
-
-    <p>
-      Recommended IDE setup:
-      <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-      +
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-      +
-      <a href="https://github.com/tauri-apps/tauri-vscode" target="_blank"
-        >Tauri</a
-      >
-      +
-      <a href="https://github.com/rust-lang/rust-analyzer" target="_blank"
-        >rust-analyzer</a
-      >
-    </p>
-
-    <Greet />
+    <h4>Tauri 跨平台自动更新测试(当前版本 {{ pkg.version }})</h4>
+    <h4>版本更新信息:{{ updateInfo }}</h4>
   </div>
+  <t-space size="24px">
+    <t-button theme="primary" @click="appCheckUpdate" :loading="loading">
+      <template #icon> <t-icon name="refresh" /></template>
+      检查更新
+    </t-button>
+    <t-button theme="primary" :disabled="!isNeedUpdate" @click="appInstallNewVersion">
+      <template #icon> <t-icon name="download" /></template>
+      安装更新
+    </t-button>
+
+    <t-button @click="relaunch">
+      <template #icon> <t-icon name="download" /></template>
+      重启应用
+    </t-button>
+  </t-space>
 </template>
 
-<style scoped>
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #249b73);
-}
-</style>

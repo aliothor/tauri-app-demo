@@ -8,7 +8,7 @@ on:
 
 jobs:
   create-release:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     outputs:
       RELEASE_UPLOAD_ID: ${{ steps.create_release.outputs.id }}
 
@@ -20,6 +20,7 @@ jobs:
         run: |
           echo "using version tag ${GITHUB_REF:10}"
           echo ::set-output name=version::"${GITHUB_REF:10}"
+          
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -35,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-latest, windows-latest]
+        platform: [windows-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -82,7 +83,7 @@ jobs:
 
   # 生成静态资源并将其推送到 github pages
   updater:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: [create-release, build-tauri]
 
     steps:
