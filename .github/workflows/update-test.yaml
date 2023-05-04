@@ -31,7 +31,7 @@ jobs:
           tag_name: "${{ steps.get_version.outputs.VERSION }}"
           name: "xaggeo-app ${{ steps.get_version.outputs.VERSION }}"
           body: "更新内容请查看UPDATE_LOG.md文件"
-          body_path: ${{ github.workspace }}-UPDATE_LOG.md
+          # body_path: ${{ github.workspace }}-UPDATE_LOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
 
   build-tauri:
