@@ -45,7 +45,7 @@
       "endpoints": [
         "https://github.com/pluto369/tauri-app-demo/blob/auto-update/install.json"
       ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEMwRTg2MjEyNUIyNEZGODIKUldTQy95UmJFbUxvd0wzUUJ3RXBZYUJQV3lWaFVObk93YldJWmRaVGRuZjZ6Q3lqUVRKdHRSbGEK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDYxQzJEMTVCODc5MDFDODYKUldTR0hKQ0hXOUhDWVVrRlorbi9jVU9CTkQ5dUsvT3djZlZHb1p3cFBtWEcvT2FUTUo3aHVscVoK"
     },
     "windows": [
       {

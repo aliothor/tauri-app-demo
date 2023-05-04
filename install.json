@@ -4,7 +4,7 @@
     "pub_date": "2023-05-04T15:56:57Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEMwRTg2MjEyNUIyNEZGODIKUldTQy95UmJFbUxvd0wzUUJ3RXBZYUJQV3lWaFVObk93YldJWmRaVGRuZjZ6Q3lqUVRKdHRSbGEK",
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDYxQzJEMTVCODc5MDFDODYKUldTR0hKQ0hXOUhDWVVrRlorbi9jVU9CTkQ5dUsvT3djZlZHb1p3cFBtWEcvT2FUTUo3aHVscVoK",
             "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.12/xaggeo-app_0.0.12_x64_en-US.msi"
         }
     }
