@@ -43,9 +43,9 @@
       "active": true,
       "dialog": false,
       "endpoints": [
-        "https://github.com/pluto369/tauri-app-demo/blob/auto-update/install.json"
+        "http://127.0.0.1:8080/install.json"
       ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDYxQzJEMTVCODc5MDFDODYKUldTR0hKQ0hXOUhDWVVrRlorbi9jVU9CTkQ5dUsvT3djZlZHb1p3cFBtWEcvT2FUTUo3aHVscVoK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDg3NUMyNERFQkM3MjRBN0UKUldSK1NuSzgzaVJjaC9ramd5THE3U2FwRVVuRjhwNVhES2FqOUV6cFRlUGQ3NzRMUTVNTmYwN3QK"
     },
     "windows": [
       {
