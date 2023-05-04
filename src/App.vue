@@ -6,7 +6,7 @@ import Greet from "./components/Greet.vue";
 
 <template>
   <div class="container">
-    <h1>Welcome to Tauri(当前版本 0.0.10)</h1>
+    <h1>Welcome to Tauri(当前版本 0.0.12)</h1>
 
     <div class="row">
       <a href="https://vitejs.dev" target="_blank">
