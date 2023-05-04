@@ -43,7 +43,7 @@
       "active": true,
       "dialog": false,
       "endpoints": [
-        "http://127.0.0.1:8080/install.json"
+        "https://pluto369.github.io/tauri-app-demo/install.json"
       ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDg3NUMyNERFQkM3MjRBN0UKUldSK1NuSzgzaVJjaC9ramd5THE3U2FwRVVuRjhwNVhES2FqOUV6cFRlUGQ3NzRMUTVNTmYwN3QK"
     },
