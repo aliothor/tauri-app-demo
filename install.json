@@ -1,0 +1,35 @@
+{
+  "version": "v0.0.24",
+  "notes": "跨端[windows-latest, ubuntu-latest, macos-latest]自动更新测试",
+  "pub_date": "2023-05-05T03:51:10.467Z",
+  "platforms": {
+    "win64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaDVlVDR5OEtXVDhhK2NHd3R1ZU1KVGMyUk9EZnkwZmhRNVpFcTJzajR4dXZmNDVaUFRoWnYrV0xFeHg3NnBlRWtPY1EwMzY4ZU1xMGdwSS9lMEJwVVFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NjI1CWZpbGU6eGFnZ2VvLWFwcF8wLjAuMjRfeDY0X2VuLVVTLm1zaS56aXAKOWpDKzd3cTk1RHV4TUxUVmd5WGhVdjNnUnBaQkJNWDNieERBVlhiRlVMQzh0Y0xHSEREZS9VR3Jpd015WGt3L21wOTl6N3Avd0dhTnB2VUhab3FYQUE9PQo=",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_0.0.24_x64_en-US.msi.zip"
+    },
+    "linux": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaDZoVnFjajJPUFcrNGZaYlNBakRHcWJUU0dKSjdVeXplczBIdXdTMXAxdWRSR0xnVGplTzhLcW9aczFTeEVaZENWQWJUNSt0R2RlWFpQKy9qT1JhRUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NDY3CWZpbGU6eGFnZ2VvLWFwcF8wLjAuMjRfYW1kNjQuQXBwSW1hZ2UudGFyLmd6CnNlejM2Y3AvZkNDYVlvYUhzUFBuejFMN0xrTnVZRHZ4ODJVM2JmcS9ab0lza001ZVh4cVlzL2x0MlE5Qk1TQ2dLQ2JKcG1lWUxSd1pISS9henJtZ0JBPT0K",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_0.0.24_amd64.AppImage.tar.gz"
+    },
+    "darwin": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaHpxODNXSTJxVHk4eU1lclhyTFpseGtjVkk2MFZQbHcvWWxXRjhlaGZzOHB6MktnOTNpWlpDcTFxcjhhS0tUcUNmL29EQ09VNTVwVkk0clRPMDIwYkE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NTUxCWZpbGU6eGFnZ2VvLWFwcC5hcHAudGFyLmd6CnBHenRQWmNTdG1FaHVOakJoNVJsUW4yTlZyaFUyZTBwTGlVcEhCQkU1bnI3eVJlOVdZWE5VNXhwTE4wdzhhOUJVYlk3N2FTRVlZczhCc0k4eGlnRUR3PT0K",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_x64.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaHpxODNXSTJxVHk4eU1lclhyTFpseGtjVkk2MFZQbHcvWWxXRjhlaGZzOHB6MktnOTNpWlpDcTFxcjhhS0tUcUNmL29EQ09VNTVwVkk0clRPMDIwYkE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NTUxCWZpbGU6eGFnZ2VvLWFwcC5hcHAudGFyLmd6CnBHenRQWmNTdG1FaHVOakJoNVJsUW4yTlZyaFUyZTBwTGlVcEhCQkU1bnI3eVJlOVdZWE5VNXhwTE4wdzhhOUJVYlk3N2FTRVlZczhCc0k4eGlnRUR3PT0K",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_x64.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaHpxODNXSTJxVHk4eU1lclhyTFpseGtjVkk2MFZQbHcvWWxXRjhlaGZzOHB6MktnOTNpWlpDcTFxcjhhS0tUcUNmL29EQ09VNTVwVkk0clRPMDIwYkE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NTUxCWZpbGU6eGFnZ2VvLWFwcC5hcHAudGFyLmd6CnBHenRQWmNTdG1FaHVOakJoNVJsUW4yTlZyaFUyZTBwTGlVcEhCQkU1bnI3eVJlOVdZWE5VNXhwTE4wdzhhOUJVYlk3N2FTRVlZczhCc0k4eGlnRUR3PT0K",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_x64.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaDZoVnFjajJPUFcrNGZaYlNBakRHcWJUU0dKSjdVeXplczBIdXdTMXAxdWRSR0xnVGplTzhLcW9aczFTeEVaZENWQWJUNSt0R2RlWFpQKy9qT1JhRUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NDY3CWZpbGU6eGFnZ2VvLWFwcF8wLjAuMjRfYW1kNjQuQXBwSW1hZ2UudGFyLmd6CnNlejM2Y3AvZkNDYVlvYUhzUFBuejFMN0xrTnVZRHZ4ODJVM2JmcS9ab0lza001ZVh4cVlzL2x0MlE5Qk1TQ2dLQ2JKcG1lWUxSd1pISS9henJtZ0JBPT0K",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_0.0.24_amd64.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSK1NuSzgzaVJjaDVlVDR5OEtXVDhhK2NHd3R1ZU1KVGMyUk9EZnkwZmhRNVpFcTJzajR4dXZmNDVaUFRoWnYrV0xFeHg3NnBlRWtPY1EwMzY4ZU1xMGdwSS9lMEJwVVFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjgzMjU4NjI1CWZpbGU6eGFnZ2VvLWFwcF8wLjAuMjRfeDY0X2VuLVVTLm1zaS56aXAKOWpDKzd3cTk1RHV4TUxUVmd5WGhVdjNnUnBaQkJNWDNieERBVlhiRlVMQzh0Y0xHSEREZS9VR3Jpd015WGt3L21wOTl6N3Avd0dhTnB2VUhab3FYQUE9PQo=",
+      "url": "https://github.com/pluto369/tauri-app-demo/releases/download/v0.0.24/xaggeo-app_0.0.24_x64_en-US.msi.zip"
+    }
+  }
+}
