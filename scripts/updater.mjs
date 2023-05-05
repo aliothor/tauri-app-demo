@@ -75,12 +75,13 @@ async function updater() {
     // windows
     await setAsset(asset, /.msi.zip/, ["win64", "windows-x86_64"]);
 
-    // darwin
+    // darwin(macOS)
     await setAsset(asset, /.app.tar.gz/, ["darwin", "darwin-x86_64", "darwin-aarch64"]);
 
     // linux
     await setAsset(asset, /.AppImage.tar.gz/, ["linux", "linux-x86_64"]);
   });
+
   await Promise.allSettled(promises);
 
   if (!fs.existsSync("updater")) {

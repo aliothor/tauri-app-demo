@@ -1,7 +1,6 @@
 import { createRequire } from "module";
 import fs from "fs";
 import dayjs from "dayjs";
-// import installJson from "../install.json";
 
 const require = createRequire(import.meta.url);
 

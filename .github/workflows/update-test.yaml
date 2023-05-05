@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: 获取版本信息
         id: get_ref_version
-        uses: battila7/get-version-action@v2
+        uses: CarterChen247/version-retriever@v1
 
       - uses: actions/checkout@v3
       - name: Query version number
@@ -33,9 +33,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "${{ steps.get_ref_version.outputs.version }}"
-          name: "xaggeo-app ${{ steps.get_ref_version.outputs.version }}"
+          name: "${{ steps.get_ref_version.outputs.version }}"
           body: "更新内容请查看 UPDATE_LOG.md 文件"
-          # body_path: ${{ github.workspace }}-UPDATE_LOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
 
   build-tauri:
