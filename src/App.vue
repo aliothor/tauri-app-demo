@@ -10,6 +10,7 @@ import pkg from "../package.json";
 const isNeedUpdate = ref(false);
 const updateInfo = ref();
 const loading = ref(false);
+const installing = ref(false);
 
 async function appCheckUpdate() {
   loading.value = true;
@@ -28,12 +29,15 @@ async function appCheckUpdate() {
 }
 
 async function appInstallNewVersion() {
+  installing.value = true
   try {
     if (isNeedUpdate.value) {
       await installUpdate();
     }
   } catch (error) {
     console.error(error);
+  } finally {
+    installing.value = false
   }
 }
 </script>
@@ -48,7 +52,7 @@ async function appInstallNewVersion() {
       <template #icon> <t-icon name="refresh" /></template>
       检查更新
     </t-button>
-    <t-button theme="primary" :disabled="!isNeedUpdate" @click="appInstallNewVersion">
+    <t-button theme="primary" :disabled="!isNeedUpdate" @click="appInstallNewVersion" :loading="installing">
       <template #icon> <t-icon name="download" /></template>
       安装更新
     </t-button>
