@@ -20,6 +20,11 @@ async function appCheckUpdate() {
     console.log(shouldUpdate, manifest);
     isNeedUpdate.value = shouldUpdate;
     updateInfo.value = manifest;
+
+    if (shouldUpdate === false) {
+      MessagePlugin.info('当前版本已是最新版本')
+    }
+
   } catch (error) {
     console.error(error);
     MessagePlugin.error("版本更新失败");
@@ -29,6 +34,7 @@ async function appCheckUpdate() {
 }
 
 async function appInstallNewVersion() {
+  const e = await MessagePlugin.loading('正在请求新版应用程序安装包...', 0)
   installing.value = true
   try {
     if (isNeedUpdate.value) {
@@ -38,6 +44,7 @@ async function appInstallNewVersion() {
     console.error(error);
   } finally {
     installing.value = false
+    e.close()
   }
 }
 </script>

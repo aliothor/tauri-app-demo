@@ -1,5 +1,9 @@
 # Updater Log
 
+## v0.0.24
+
+跨端[windows-latest, ubuntu-latest, macos-latest]自动更新测试
+
 ## v0.0.23
 
 跨端[windows-latest, ubuntu-latest, macos-latest]自动更新测试
