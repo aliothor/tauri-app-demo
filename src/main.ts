@@ -1,5 +1,10 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import { initAppWindowToolBar, mockWindowLoading } from './utils'
+
+// initAppWindowToolBar()
+
+mockWindowLoading()
 
 import TDesign from "tdesign-vue-next";
 

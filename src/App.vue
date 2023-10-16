@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { MessagePlugin } from "tdesign-vue-next";
 
 import { checkUpdate, installUpdate } from "@tauri-apps/api/updater";
-import { relaunch } from '@tauri-apps/api/process';
+import { relaunch } from "@tauri-apps/api/process";
 
 import pkg from "../package.json";
 
@@ -16,15 +16,14 @@ async function appCheckUpdate() {
   loading.value = true;
 
   try {
-    const { shouldUpdate, manifest } = await checkUpdate()
+    const { shouldUpdate, manifest } = await checkUpdate();
     console.log(shouldUpdate, manifest);
     isNeedUpdate.value = shouldUpdate;
     updateInfo.value = manifest;
 
     if (shouldUpdate === false) {
-      MessagePlugin.info('当前版本已是最新版本')
+      MessagePlugin.info("当前版本已是最新版本");
     }
-
   } catch (error) {
     console.error(error);
     MessagePlugin.error("版本更新失败");
@@ -34,8 +33,8 @@ async function appCheckUpdate() {
 }
 
 async function appInstallNewVersion() {
-  const e = await MessagePlugin.loading('正在请求新版应用程序安装包...', 0)
-  installing.value = true
+  const e = await MessagePlugin.loading("正在请求新版应用程序安装包...", 0);
+  installing.value = true;
   try {
     if (isNeedUpdate.value) {
       await installUpdate();
@@ -43,8 +42,8 @@ async function appInstallNewVersion() {
   } catch (error) {
     console.error(error);
   } finally {
-    installing.value = false
-    e.close()
+    installing.value = false;
+    e.close();
   }
 }
 </script>
@@ -71,3 +70,8 @@ async function appInstallNewVersion() {
   </t-space>
 </template>
 
+<style>
+#app{
+  margin-top: 30px;
+}
+</style>

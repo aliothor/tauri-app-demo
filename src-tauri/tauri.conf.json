@@ -54,7 +54,17 @@
         "title": "数据采集平台",
         "width": 800,
         "height": 600,
-        "center": true
+        "center": true,
+        "decorations": true,
+        "visible": false
+      },{
+        "resizable": true,
+        "center": true,
+        "width": 800,
+        "height": 600,
+        "decorations": false,
+        "label": "splashscreen",
+        "url": "splashscreen.html"
       }
     ]
   }
